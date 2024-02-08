@@ -2,10 +2,10 @@
 from pypeds import ipeds
 
 
-############### Test range of years
+# Test range of years
 
 # the years to teset
-years = list(range(2017, 2019))
+years = list(range(2017, 2022))
 
 # instantiate and go
 tmp = ipeds.HD(years=years)
@@ -14,6 +14,6 @@ x = tmp.load()
 x.shape
 x.fall_year.value_counts(dropna=False, sort=False)
 
-## cleanup
+# cleanup
 del tmp
 del x
