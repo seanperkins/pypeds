@@ -82,7 +82,7 @@ def read_survey(path):
 def get_hd(year):
     # assert that year is a int and length 1
     assert isinstance(year, int), "year is not an integer"
-    assert year >= 2002 and year <= 2022, "year must be >=2002 and <= 2022"
+    assert year >= 2002 and year <= 2024, "year must be >=2002 and <= 2024"
     # build the SURVEY id
     SURVEY = 'HD' + str(year)
     # build the url
@@ -205,7 +205,7 @@ def get_ff2(year):
 def get_ca(year):
     # assert that year is a int and length 1
     assert isinstance(year, int), "year is not an integer"
-    assert year >= 2002 and year <= 2022, "year must be >=2002 and <= 2022"
+    assert year >= 2002 and year <= 2024, "year must be >=2002 and <= 2024"
     # build the SURVEY id
     SURVEY = 'C' + str(year) + "_A"
     # build the url
@@ -224,7 +224,7 @@ class HD(object):
     Methods are extract, transform, and load.
     """
 
-    def __init__(self, years=[2022]):
+    def __init__(self, years=[2024]):
         """
         The constructor for the HD survey
 
@@ -246,7 +246,7 @@ class HD(object):
         for year in self.years:
             # assert that year is a int and length 1
             assert isinstance(year, int), "year is not an integer"
-            assert year >= 2002 and year <= 2022, "year must be >=2002 and <= 2022"
+            assert year >= 2002 and year <= 2024, "year must be >=2002 and <= 2024"
             # build the SURVEY id
             SURVEY = 'HD' + str(year)
             # build the url
@@ -988,7 +988,7 @@ class C_A(object):
     Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender
     """
 
-    def __init__(self, years=[2022]):
+    def __init__(self, years=[2024]):
         """
         Public institutions - GASB
 
